@@ -47,6 +47,11 @@ public class EcritureComptableServiceTest {
         vEcriture.getListLigneEcriture().add(this.createLigne(1, "20", "1"));
         vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "30"));
         vEcriture.getListLigneEcriture().add(this.createLigne(2, "1", "2"));
+        
+        System.out.println("Debit : " + ecritureComptableService.getTotalDebit(vEcriture) + "<<< PERRY >>>");
+        System.out.println("Credit : " + ecritureComptableService.getTotalCredit(vEcriture) + "<<< PERRY >>>");
+        
+        
         Assertions.assertFalse(ecritureComptableService.isEquilibree(vEcriture));
     }
 
